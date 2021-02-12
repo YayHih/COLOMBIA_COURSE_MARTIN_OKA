@@ -1,0 +1,45 @@
+#this project is using a heavly modified version of https://machinelearningmastery.com/logistic-regression-tutorial-for-machine-learning/
+# Example of calculating Euclidean distance
+from math import sqrt
+import matplotlib.pyplot as plt 
+
+b=0
+# calculate the Euclidean distance between two vectors
+def euclidean_distance(row1, row2):
+    distance = 0.0
+    for i in range(len(row1)-1):
+        distance += (row1[i] - row2[i])**2
+    return sqrt(distance)
+    
+# Test distance function
+dataset = [[2.7810836,2.550537003],
+	[1.465489372,2.362125076],
+	[3.396561688,4.400293529],
+	[1.38807019,1.850220317],
+	[3.06407232,3.005305973],
+	[7.627531214,2.759262235],
+	[5.332441248,2.088626775],
+	[6.922596716,1.77106367],
+	[8.675418651,-0.242068655],
+	[7.673756466,3.508563011]]
+row0 = dataset[0]
+for row in dataset:
+    distance = euclidean_distance(row0, row)
+    print(distance)
+    distance =0;
+    
+def plot_regression_line(row1, row2, b): 
+    row1=([2.7810836,1.465489372,3.396561688,1.38807019,3.06407232,7.627531214,5.332441248,6.922596716,8.675418651,7.673756466])
+    row2=([2.550537003,2.362125076,4.400293529,1.850220317,3.005305973,2.759262235,2.088626775,1.77106367,-0.242068655,3.508563011])
+    # plotting the actual points as scatter plot 
+    plt.scatter(row1, row2, color = "m", marker = "o", s = 30) 
+  
+  
+  
+    # putting labels 
+    plt.xlabel('x') 
+    plt.ylabel('y') 
+  
+    # function to show plot 
+    plt.show() 
+plot_regression_line(row1, row2, b) 
