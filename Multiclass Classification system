@@ -1,3 +1,4 @@
+#this is a single class classifcation system, using a desition tree clasifer, provided by https://www.geeksforgeeks.org/multiclass-classification-using-scikit-learn/
 # importing necessary libraries 
 from sklearn import datasets 
 from sklearn.metrics import confusion_matrix 
@@ -21,4 +22,4 @@ dtree_predictions = dtree_model.predict(X_test)
 # creating a confusion matrix 
 cm = confusion_matrix(y_test, dtree_predictions) 
 print (cm)
-*/ credit to https://www.geeksforgeeks.org/multiclass-classification-using-scikit-learn/ */
+
