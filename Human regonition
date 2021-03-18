@@ -1,4 +1,4 @@
-
+#huge thanks to https://pypi.org/project/face-recognition/#description, which helped with the faical reognitio software.
 import PIL.Image
 import PIL.ImageDraw
 import face_recognition
