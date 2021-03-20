@@ -4,6 +4,7 @@ import PIL.ImageDraw
 import face_recognition
 
 # Load the jpg file into a numpy array
+#all files are local, so you have to download them.
 given_image = face_recognition.load_image_file('masks.jpg')
 # Find all the faces in the image
 face_locations = face_recognition.face_locations(given_image)
